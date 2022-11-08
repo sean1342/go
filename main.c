@@ -65,7 +65,8 @@ int main()
 
         i_column--; i_row--;
 
-        m[i_row][i_column] = i_player;
+        if(m[i_row][i_column] == 0)
+            m[i_row][i_column] = i_player;
 
         // count liberties of pieces
         for(int i = 0; i < SIZE; i++)
